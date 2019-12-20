@@ -1,0 +1,43 @@
+{
+  "name": "typeormstarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:torm": "ts-node src/index.ts",
+    "typeorm": "typeorm init --name MyProject --database postgres",
+    "clean": "rm -rf node_modules build && rm package-lock.json",
+    "ncu": "ncu",
+    "upgrade": "ncu -u",
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "tsc": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cali3192/typeormPlayground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cali3192/typeormPlayground/issues"
+  },
+  "homepage": "https://github.com/cali3192/typeormPlayground#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "nodemon": "^2.0.2",
+    "npm-check-updates": "^4.0.1",
+    "ts-node": "8.5.4",
+    "typescript": "3.7.3"
+  },
+  "dependencies": {
+    "@types/express-winston": "^4.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.0.2",
+    "pg": "^7.15.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.21"
+  }
+}
