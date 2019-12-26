@@ -3,8 +3,12 @@ import { Router, Request, Response, Next } from "express";
 
 const routes = Router();
 
-routes.get("/route", (req: Request, res: Response) => {
-  res.send("I am the route!");
+routes.get("/", (request: Request, response: Response) => {
+  console.log(`inside the / route`);
+  response.send("I am the route!");
+  const ip =
+    request.headers["x-forwarded-for"] || request.connection.remoteAddress;
+  console.log(`this is the current ip address`, ip);
 });
 
 routes.get("/hi", (request: Request, response: Response) => {
